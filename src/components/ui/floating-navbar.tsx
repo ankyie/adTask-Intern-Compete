@@ -43,23 +43,21 @@ export const FloatingNav = ({
     const [visible, setVisible] = useState(true);
     const lastScrollY = useRef(0);
 
-    const handleScroll = (current) => {
-        if (typeof current === "number") {
-            const scrollThreshold = 0.1;
-
-            if (current < scrollThreshold) {
-                setVisible(true);
-                return;
-            }
-
-            const direction = current - lastScrollY.current;
-            lastScrollY.current = current;
-
-            setVisible(direction < 0);
+    const handleScroll = (current: number) => {
+        const scrollThreshold = 0.1;
+    
+        if (current < scrollThreshold) {
+            setVisible(true);
+            return;
         }
+    
+        const direction = current - lastScrollY.current;
+        lastScrollY.current = current;
+    
+        setVisible(direction < 0);
     };
-
-    const debouncedHandleScroll = debounce(handleScroll, 50);
+    
+    const debouncedHandleScroll = debounce<(current: number) => void>(handleScroll, 50);    
 
     useMotionValueEvent(scrollYProgress, "change", debouncedHandleScroll);
 
