@@ -5,13 +5,13 @@ import { cn } from "@/lib/utils";
 
 const VideoIntro = () => {
   return (
-    <div className="relative flex justify-center items-center">
+    <div className="relative flex justify-center items-center xl:p-0 md:px-24 sm:px-8 px-2">
       {/* <Button
         borderClassName={"bg-[radial-gradient(#7687B5_40%,transparent_90%)]"}
         className="bg-[#7687B5]/30 border-none"
       >
       </Button> */}
-      <div className="relative bg-transparent p-[1px] overflow-hidden bg-black w-[970px] h-[582px] rounded-xl flex items-center justify-center cursor-default -top-28">
+      <div className="relative bg-transparent p-[1px] overflow-hidden bg-black xl:w-[970px] xl:h-[582px] w-full aspect-video rounded-xl flex items-center justify-center cursor-default">
         <div
           className="absolute inset-0 rounded-xl overflow-hidden"
           style={{ borderRadius: `calc(${"1.75rem"} * 0.96)` }}

@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import GradientButton from "./gradient-button";
+import { FaPhone } from "react-icons/fa";
 
 export const FloatingNav = ({
   navItems,
@@ -43,14 +44,14 @@ export const FloatingNav = ({
   });
 
   return (
-    <nav>
+    <nav className="max-md:hidden">
       <AnimatePresence mode="wait">
         <motion.div
           initial={{ opacity: 1, y: -100 }}
           animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "flex w-[1176px] h-16 fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-xl dark:bg-[#0F0F0F] bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-between space-x-4",
+            "flex xl:w-[1176px] md:w-[760px] w-full h-16 fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-xl dark:bg-[#0F0F0F] bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2 items-center justify-between space-x-4",
             className
           )}
         >
@@ -61,7 +62,7 @@ export const FloatingNav = ({
               </span>
             </Link>
           </div>
-          <div className="nav-pages relative left-20 flex items-center justify-center gap-6">
+          <div className="nav-pages relative xl:left-20 left-3 flex items-center justify-center gap-6">
             {navItems.map((navItem, idx) => (
               <div className="relative nav-pages-box group" key={`link=${idx}`}>
                 <Link
@@ -91,14 +92,47 @@ export const FloatingNav = ({
                 text="Login"
               />
             </Link>
-            <Link href={"#"}>
-              <GradientButton
-                buttonColor="#7687B5"
-                buttonColorOpacity={30}
-                gradientColor="white"
-                text="Try Now for Free"
-              />
-            </Link>
+            <Link href={"#"} className="max-xl:hidden">
+            <GradientButton
+              buttonColor="#7687B5"
+              buttonColorOpacity={30}
+              gradientColor="white"
+              text="Try Now for Free"
+            />
+          </Link>
+            <Link href={"#"} className="xl:hidden">
+            <GradientButton
+              buttonColor="#7687B5"
+              buttonColorOpacity={30}
+              gradientColor="white"
+              className="px-2"
+              text={
+                <div>
+                  <svg width="0" height="0">
+                    <radialGradient
+                      id="phone-gradient"
+                      cx="50%"
+                      cy="50%"
+                      r="50%"
+                    >
+                      <stop stopColor="#C7D7FF" offset="0%" />
+                      <stop stopColor="#788199" offset="100%" />
+                    </radialGradient>
+                  </svg>
+
+                  <FaPhone
+                    style={{
+                      fill: "url(#phone-gradient)",
+                      width: "1.5em",
+                      height: "1.5em",
+                      position: "relative",
+                    }}
+                    className={""}
+                  />
+                </div>
+              }
+            />
+          </Link>
           </div>
         </motion.div>
       </AnimatePresence>

@@ -35,7 +35,7 @@ const testimonials = [
 
 const TestimonialGrid = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
       { testimonials.map((item, index) => {return <div key={index} className="testimonial-card bg-gradient-to-l from-[#7687B5] to-[#333B4F]/80 p-[1px] w-[352px] h-[196px] rounded-xl">
         <div className="inner-card bg-gradient-to-b from-[#0B0B0B] to-[#131313] w-full h-full rounded-xl px-4 py-6">
           <div className="flex flex-col h-full w-full justify-between">

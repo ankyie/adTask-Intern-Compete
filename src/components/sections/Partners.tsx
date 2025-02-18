@@ -99,7 +99,7 @@ const Partners = ({
     addAnimation();
   }, [addAnimation]);
   return (
-    <section className="partners pb-24">
+    <section className="partners xl:pb-24 md:pb-16 pb-12">
       <div className="relative">
       <div
         ref={containerRef}
@@ -119,7 +119,7 @@ const Partners = ({
           {items.map((item, index) => {
             return (
               <li key={index} className="opacity-35">
-                <Image src={item.src} alt={item.name} height={90} width={90} />
+                <Image src={item.src} alt={item.name} height={80} width={80} />
               </li>
             );
           })}

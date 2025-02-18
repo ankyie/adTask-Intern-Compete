@@ -6,14 +6,14 @@ import HomeEnd from "@/components/sections/HomeEnd";
 import Partners from "@/components/sections/Partners";
 import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
-import VideoIntro from "@/components/sections/VideoIntro";
+// import VideoIntro from "@/components/sections/VideoIntro";
 import WorksWith from "@/components/sections/WorksWith";
 
 export default function Home() {
   return (
     <div className="bg-[#050506]">
       <Hero />
-      <VideoIntro />
+      {/* <VideoIntro /> */}
       <Partners />
       <WorksWith />
       <Features />

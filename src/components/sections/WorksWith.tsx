@@ -37,11 +37,11 @@ const WorksWith = () => {
     <section className="works-with h-96">
       <div className="flex flex-col gap-8 justify-center items-center">
         <h2 className="text-[#E2E8F8]">AdTask AI works with :</h2>
-        <div>
-          <ul className="flex justify-center items-center gap-8">
+        <div className="flex justify-center items-center">
+          <ul className="flex flex-wrap justify-center items-center md:gap-8 gap-4 max-sm:w-[358px]">
             {worked.map((work, index) => {
               return <li className="relative cursor-pointer group transition-all duration-300" key={index}>
-              <div className="relative top-4 group-hover:top-0 duration-300 flex justify-center items-center w-28 h-28 bg-gradient-to-l p-[1px] from-[#7687B5] to-[#333B4F] rounded-xl">
+              <div className="relative top-4 group-hover:top-0 duration-300 flex justify-center items-center xl:w-28 xl:h-28 w-20 h-20 bg-gradient-to-l p-[1px] from-[#7687B5] to-[#333B4F] rounded-xl">
                 <div className="w-full h-full rounded-xl relative flex justify-center items-center p-6">
                   <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-[#22252E] group-hover:[mask-image:radial-gradient(ellipse_at_center,transparent_10%,#333B4F_68%)] transition-all duration-300 rounded-xl"></div>
                   <GlowyIcon

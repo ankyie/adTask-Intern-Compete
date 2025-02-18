@@ -6,7 +6,8 @@ import { SparklesCore } from "../ui/sparkles";
 
 const Services = () => {
   return (
-    <div className="flex flex-col gap-8 justify-center items-center min-h-screen py-24 mt-24">
+    <div className="flex flex-col gap-8 justify-center items-center py-24 mt-24">
+
       <div className="flex flex-col w-full justify-center items-center gap-6 pb-20">
         <BlackButton>SERVICES</BlackButton>
         <div className="flex w-full justify-center items-center">
@@ -25,7 +26,11 @@ const Services = () => {
           </p>
         </div>
       </div>
-      <ServicesGrid />
+
+      <div>
+        <ServicesGrid />
+      </div>
+
       <div className="py-8">
         <Button
           borderClassName={"bg-[radial-gradient(#B6C7F5_20%,transparent_70%)]"}

@@ -6,14 +6,14 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const Contact = () => {
   return (
-    <section className="contact py-16">
-      <div className="flex flex-col justify-center items-center gap-16">
+    <section className="contact">
+      <div className="flex flex-col justify-center items-center gap-16 w-full sm:p-0 px-6 py-16">
         <div>
           <BlackButton>CONTACT US</BlackButton>
         </div>
 
-        <div className="flex w-[1032px] justify-between">
-          <div className="relative contact-text flex flex-col gap-8 w-1/2 pr-16">
+        <div className="flex max-xl:flex-col gap-16 xl:w-[1032px] md:w-[705px] xl:justify-between justify-center">
+          <div className="relative contact-text flex flex-col gap-8 xl:w-1/2 pr-16">
             <div className="feature-circular-gradient w-[303px] h-[146px] bg-[#263048] rounded-full absolute left-8 top-20 filter blur-[139.5px]"></div>
 
             <div className="relative text-4xl">
@@ -23,7 +23,7 @@ const Contact = () => {
               </h2>
             </div>
 
-            <div className="relative text-sm font-light">
+            <div className="relative text-sm font-light xl:p-0 sm:pr-24">
               <p>
                 Whether you have questions or are ready to discuss your
                 business, we’re here to help. Reach out today.
@@ -58,7 +58,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form w-1/2">
+          <div className="contact-form xl:w-1/2 w-full">
             <form className="w-full">
               <div className="mb-4">
                 <label

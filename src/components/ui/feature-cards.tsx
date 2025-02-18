@@ -7,8 +7,10 @@ import { IoTriangleSharp } from "react-icons/io5";
 
 const FeatureCards = () => {
   return (
-    <div className="relative w-[1120px] mx-auto">
-      <div className="flex justify-between gap-4">
+    <div className="relative xl:w-[1120px] md:w-[725px] sm:w-[361px] w-full max-sm:px-4 mx-auto">
+      <div className="flex flex-wrap xl:justify-between justify-center gap-4">
+
+        {/* card 1 */}
         <div className="flex justify-center items-center w-[352px] h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
           <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
             <div className="absolute w-full h-full filter blur-[64px] opacity-50">
@@ -29,7 +31,34 @@ const FeatureCards = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between items-center gap-4">
+        {/* card 4  */}
+        <div className="xl:hidden flex justify-center items-center w-[352px] h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
+          <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
+            <div className="absolute w-full h-full filter blur-[64px] opacity-50">
+              <IoTriangleSharp
+                className="text-[#7687B5] w-full h-full"
+                preserveAspectRatio="none"
+              />
+            </div>
+            <div className="feature-circle w-14 h-32 bg-[#C7D7FF] rounded-full rotate-45 absolute -top-8 left-0 filter blur-[139.2px]"></div>
+            <Reach className="relative top-2" />
+            <div className="absolute bottom-6 w-full px-6 flex flex-col gap-2 card-text">
+              <h3 className="text-sm">
+                Intelligent Agents to Optimize your Reach
+              </h3>
+              <p className="text-xs font-extralight">
+                Scale and refine your marketing with AI-powered agents. They
+                track performance in real-time to help you reach more customers
+                efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="flex xl:flex-col flex-row max-md:flex-col justify-between items-center gap-4">
+
+          {/* card 2  */}
           <div className="flex justify-center items-center w-[352px] h-[280px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
             <div className="w-full h-full rounded-xl relative flex flex-col items-center">
               <div className="absolute w-full h-full filter blur-[64px] opacity-50">
@@ -62,6 +91,8 @@ const FeatureCards = () => {
               </div>
             </div>
           </div>
+
+          {/* card 3  */}
           <div className="flex justify-center items-center w-[352px] h-[280px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
             <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
               <div className="absolute w-full h-full filter blur-[64px] opacity-50">
@@ -84,7 +115,9 @@ const FeatureCards = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center w-[352px] h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
+
+        {/* card 4  */}
+        <div className="max-xl:hidden flex justify-center items-center w-[352px] h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
           <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
             <div className="absolute w-full h-full filter blur-[64px] opacity-50">
               <IoTriangleSharp
