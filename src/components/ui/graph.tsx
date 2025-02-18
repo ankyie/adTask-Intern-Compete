@@ -1,8 +1,8 @@
 import React from "react";
 import GlowyIcon from "./glowy-icon";
 import { cn } from "@/lib/utils";
-import { IoStatsChartSharp } from "react-icons/io5";
 import { FaChartPie } from "react-icons/fa";
+import AnimatedBarChartIcon from '@/components/icons/AnimatedBarChartIcon';
 
 const Graph = ({className = ""}) => {
   return (
@@ -12,9 +12,9 @@ const Graph = ({className = ""}) => {
           <div className="flex justify-center items-center w-28 h-28 bg-gradient-to-l p-[1px] from-[#7687B5] to-[#333B4F] rounded-xl overflow-hidden">
             <div className="w-full h-full rounded-xl relative flex flex-col justify-center items-center p-2 bg-[#22252E]">
               <GlowyIcon
-                Icon={IoStatsChartSharp}
+                Icon={AnimatedBarChartIcon}
                 size="5em"
-                className="scale-125 animate-pulse"
+                className="scale-125"
               />
             </div>
           </div>

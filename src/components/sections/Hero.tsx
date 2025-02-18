@@ -7,22 +7,23 @@ import { GoTriangleDown } from "react-icons/go";
 import ShimmerButton from "../ui/shimmer-button";
 import { Button } from "../ui/moving-border";
 import { SparklesCore } from "../ui/sparkles";
+import NavbarTop from "../ui/navbar-top";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-white dark:bg-[#050506] dark:bg-grid-white/[0.02] bg-grid-[#050506]/[0.05] relative flex justify-center items-center">
-      {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div> */}
+    <div className="min-h-screen w-full bg-white dark:bg-[#050506] dark:bg-grid-white/[0.02] bg-grid-[#050506]/[0.05] relative flex justify-center">
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       <div className="flex flex-col items-center justify-center">
         <div className="spotlight-hero">
           <Spotlight
             className="top-10"
-            fill={"#7687B5"}
+            fill={"#465068"}
             height={`${100}%`}
             width={`${50}%`}
           />
           <Spotlight
             className="top-10"
-            fill={"#7687B5"}
+            fill={"#465068"}
             height={`${100}%`}
             fillOpacity={0.9}
             width={`${80}%`}
@@ -36,7 +37,15 @@ const Hero = () => {
           { name: "Contact Us", link: "#" },
         ]}
       />
-      <main>
+      <main className="pt-16">
+        <div className="flex flex-col items-center gap-16">
+              <NavbarTop
+                navItems={[
+                  { name: "Products", link: "#", icon: <GoTriangleDown /> },
+                  { name: "Tools", link: "#", icon: <GoTriangleDown /> },
+                  { name: "Contact Us", link: "#" },
+                ]}
+              />
         <div className="relative z-20 w-[767px]">
           <div className="flex flex-col items-center justify-center gap-16">
             <ShimmerButton />
@@ -53,7 +62,7 @@ const Hero = () => {
                 ad<span className="font-semibold">Task</span>.ai
               </h1>
             </div>
-            <div className="hero-quote text-center">
+            <div className="hero-quote text-center font-light">
               <p>
                 Stop struggling with marketing decisions. Our AI assistant
                 analyzes your business, creates personalized strategies, and
@@ -84,6 +93,7 @@ const Hero = () => {
               Try AdTask AI free for 30 days
             </span>
           </div>
+        </div>
         </div>
       </main>
     </div>

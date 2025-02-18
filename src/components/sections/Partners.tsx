@@ -53,56 +53,54 @@ const Partners = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
-
-  useEffect(() => {
-    addAnimation();
-  }, []);
+  
   const [start, setStart] = useState(false);
-  function addAnimation() {
+  
+  
+  const getDirection = React.useCallback(() => {
+    if (containerRef.current) {
+      containerRef.current.style.setProperty(
+        "--animation-direction",
+        direction === "left" ? "forwards" : "reverse"
+      );
+    }
+  }, [direction]);
+
+  const getSpeed = React.useCallback(() => {
+    if (containerRef.current) {
+      let duration = "40s";
+      if (speed === "fast") {
+        duration = "20s";
+      } else if (speed === "slow") {
+        duration = "80s";
+      }
+      containerRef.current.style.setProperty("--animation-duration", duration);
+    }
+  }, [speed]);
+
+  const addAnimation = React.useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
-
+  
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
+        if (scrollerRef.current) { // Check again before appending
           scrollerRef.current.appendChild(duplicatedItem);
         }
       });
-
+  
       getDirection();
       getSpeed();
       setStart(true);
     }
-  }
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards"
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse"
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
+  }, [getDirection, getSpeed]);
+
+  useEffect(() => {
+    addAnimation();
+  }, [addAnimation]);
   return (
     <section className="partners pb-24">
-      {/* <div className='flex justify-between items-center'> */}
+      <div className="relative">
       <div
         ref={containerRef}
         className={cn(
@@ -127,7 +125,8 @@ const Partners = ({
           })}
         </ul>
       </div>
-      {/* </div> */}
+      <div className="absolute -top-40 -left-[20%] partner-gradient w-[630px] h-[630px] bg-[#263048] filter blur-[173.3px] opacity-30 rounded-full"></div>
+      </div>
     </section>
   );
 };

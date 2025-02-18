@@ -7,7 +7,10 @@ interface MyButtonProps {
   gradientColor?: string;
   text: React.ReactNode;
   className?: string;
-  [key: string]: any;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>; // Example: Add onClick
+  // Add other specific event handlers or props as needed
+  // For other arbitrary props, you can use a more restricted approach if needed
+  // like:  'data-testid'?: string; or other data attributes
 }
 
 const GradientButton: React.FC<MyButtonProps> = ({
@@ -16,7 +19,8 @@ const GradientButton: React.FC<MyButtonProps> = ({
   buttonColorOpacity = 90,
   text,
   className,
-  ...props
+  onClick,
+  ...rest
 }) => {
   const isHexgradientColor = /^#([0-9A-Fa-f]{3}){1,2}$/.test(gradientColor);
   const gradientColorClass = isHexgradientColor
@@ -55,7 +59,8 @@ const GradientButton: React.FC<MyButtonProps> = ({
       <button
         className={cn("relative inline-flex items-center justify-center py-2 px-6 rounded-full overflow-hidden border border-[#7687B5]", className)}
         style={{ backgroundColor: bgColorWithOpacity }}
-        {...props}
+        onClick={onClick}
+        {...rest}
       >
         <span className="relative text-white font-light">{text}</span>
         <span

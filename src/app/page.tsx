@@ -8,7 +8,6 @@ import Services from "@/components/sections/Services";
 import Testimonials from "@/components/sections/Testimonials";
 import VideoIntro from "@/components/sections/VideoIntro";
 import WorksWith from "@/components/sections/WorksWith";
-import Image from "next/image";
 
 export default function Home() {
   return (

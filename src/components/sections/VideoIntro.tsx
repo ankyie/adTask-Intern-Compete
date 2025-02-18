@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, MovingBorder } from "../ui/moving-border";
+import { MovingBorder } from "../ui/moving-border";
 import { FaYoutube } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
