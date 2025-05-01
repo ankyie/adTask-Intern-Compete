@@ -33,8 +33,8 @@ const VideoIntro = () => {
           }}
         >
           <div className="relative">
-            <FaYoutube className="text-[#FF0000] text-8xl absolute left-[40%]" />
-            <h1 className="opacity-20 text-8xl bg-gradient-to-t from-gray-500 to-white inline-block text-transparent bg-clip-text duration-500">
+            <FaYoutube className="text-[#FF0000] md:text-8xl text-4xl absolute left-[40%]" />
+            <h1 className="opacity-20 md:text-8xl text-4xl bg-gradient-to-t from-gray-500 to-white inline-block text-transparent bg-clip-text duration-500">
               Ad<span className="font-semibold">Task</span>.ai
             </h1>
           </div>

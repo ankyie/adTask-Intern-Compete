@@ -18,7 +18,7 @@ const HomeEnd = () => {
               transition: all 0.3s duration-300; /* Add a transition for smooth effect */
             }
           `}</style>
-          <h1 className="text-8xl opacity-40 bg-gradient-to-t from-gray-500 to-white inline-block text-transparent bg-clip-text glow-on-hover duration-500">
+          <h1 className="md:text-8xl sm:text-6xl text-5xl opacity-40 bg-gradient-to-t from-gray-500 to-white inline-block text-transparent bg-clip-text glow-on-hover duration-500">
             ad<span className="font-semibold">Task</span>.ai
           </h1>
         </div>
@@ -51,13 +51,13 @@ const HomeEnd = () => {
           </div> */}
           <div className="absolute filter blur-[64px] opacity-20">
             <IoTriangleSharp
-              className="text-[#7687B5] w-[600px] h-[600px]"
+              className="text-[#7687B5] md:w-[600px] md:h-[600px] w-[300px] h-[300px]"
               preserveAspectRatio="none"
             />
           </div>
           <div className="absolute filter blur-[64px] opacity-50">
             <IoTriangleSharp
-              className="text-[#7687B5] w-[200px] h-[600px]"
+              className="text-[#7687B5] md:w-[200px] md:h-[600px] w-[100px] h-[300px]"
               preserveAspectRatio="none"
             />
           </div>

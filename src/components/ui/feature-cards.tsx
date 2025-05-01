@@ -11,7 +11,7 @@ const FeatureCards = () => {
       <div className="flex flex-wrap xl:justify-between justify-center gap-4">
 
         {/* card 1 */}
-        <div className="flex justify-center items-center w-[352px] h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
+        <div className="flex justify-center items-center sm:w-[352px] w-full h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
           <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
             <div className="absolute w-full h-full filter blur-[64px] opacity-50">
               <IoTriangleSharp
@@ -32,7 +32,7 @@ const FeatureCards = () => {
         </div>
 
         {/* card 4  */}
-        <div className="xl:hidden flex justify-center items-center w-[352px] h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
+        <div className="xl:hidden flex justify-center items-center sm:w-[352px] w-full h-[593px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
           <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
             <div className="absolute w-full h-full filter blur-[64px] opacity-50">
               <IoTriangleSharp
@@ -56,10 +56,10 @@ const FeatureCards = () => {
         </div>
 
 
-        <div className="flex xl:flex-col flex-row max-md:flex-col justify-between items-center gap-4">
+        <div className="max-sm:w-full flex xl:flex-col flex-row max-md:flex-col justify-between items-center gap-4">
 
           {/* card 2  */}
-          <div className="flex justify-center items-center w-[352px] h-[280px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
+          <div className="flex justify-center items-center sm:w-[352px] w-full h-[280px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
             <div className="w-full h-full rounded-xl relative flex flex-col items-center">
               <div className="absolute w-full h-full filter blur-[64px] opacity-50">
                 <IoTriangleSharp
@@ -68,12 +68,12 @@ const FeatureCards = () => {
                 />
               </div>
               <div className="feature-circle w-14 h-32 bg-[#C7D7FF] rounded-full rotate-45 absolute -top-8 left-0 filter blur-[139.2px]"></div>
-              <div className="relative -bottom-4 flex items-center w-full">
+              <div className="relative -bottom-4 flex items-center max-sm:justify-center w-full">
                 <div className="relative flex-1 bg-white h-[3px] filter blur-[1px] opacity-0"></div>
                 <Gear />
                 <div className="relative flex-1">
-                  <span className="absolute text-center w-full text-xs -top-5 text-transparent bg-clip-text bg-gradient-to-l from-[#7687B5] via-[#91B0FF] to-[#E2E8F8]">
-                    GEN AI Powered
+                  <span className="absolute text-center w-full text-xs sm:-top-5 -top-10 text-transparent bg-clip-text bg-gradient-to-l from-[#7687B5] via-[#91B0FF] to-[#E2E8F8]">
+                    <span className="flex max-sm:flex-col justify-center items-center sm:gap-1">GEN AI<span>Powered</span></span>
                   </span>
                   <div className="relative">
                     <div className="bg-white h-[1px]"></div>
@@ -93,7 +93,7 @@ const FeatureCards = () => {
           </div>
 
           {/* card 3  */}
-          <div className="flex justify-center items-center w-[352px] h-[280px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
+          <div className="flex justify-center items-center sm:w-[352px] w-full sm:h-[280px] h-[320px] bg-gradient-to-t from-[#1D2333] to-[#0B0B0B] rounded-xl overflow-hidden">
             <div className="w-full h-full rounded-xl relative flex flex-col items-center p-6">
               <div className="absolute w-full h-full filter blur-[64px] opacity-50">
                 <IoTriangleSharp

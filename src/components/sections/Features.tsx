@@ -6,7 +6,7 @@ const Features = () => {
   return (
     <div>
       <div className="relative flex flex-col justify-center items-center gap-6 pb-20">
-        <div className="feature-circular-gradient w-[495px] h-[238px] bg-[#263048] rounded-full absolute left-1/3 top-24 filter blur-[139.5px]"></div>
+        <div className="feature-circular-gradient md:w-[495px] md:h-[238px] w-[186px] h-[90px] bg-[#263048] rounded-full absolute left-1/3 top-24 filter blur-[139.5px]"></div>
         <BlackButton className="relative">FEATURES</BlackButton>
         <div className="relative flex w-full justify-center items-center">
           <div className="relative h-[2px] flex-1 bg-gradient-to-r from-[#0D111A] to-[#5C73AE]"></div>

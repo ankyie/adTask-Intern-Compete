@@ -125,7 +125,7 @@ const Partners = ({
           })}
         </ul>
       </div>
-      <div className="absolute -top-40 -left-[20%] partner-gradient w-[630px] h-[630px] bg-[#263048] filter blur-[173.3px] opacity-30 rounded-full"></div>
+      <div className="absolute -top-40 -left-[20%] partner-gradient md:w-[630px] md:h-[630px] w-[100vw] h-[100vw] bg-[#263048] filter blur-[173.3px] opacity-30 rounded-full"></div>
       </div>
     </section>
   );

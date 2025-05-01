@@ -14,7 +14,7 @@ const Contact = () => {
 
         <div className="flex max-xl:flex-col gap-16 xl:w-[1032px] md:w-[705px] xl:justify-between justify-center">
           <div className="relative contact-text flex flex-col gap-8 xl:w-1/2 pr-16">
-            <div className="feature-circular-gradient w-[303px] h-[146px] bg-[#263048] rounded-full absolute left-8 top-20 filter blur-[139.5px]"></div>
+            <div className="feature-circular-gradient sm:w-[303px] sm:h-[146px] w-[150px] h-[73px] bg-[#263048] rounded-full absolute left-8 top-20 filter blur-[139.5px]"></div>
 
             <div className="relative text-4xl">
               <h2>Ask whatever you have</h2>

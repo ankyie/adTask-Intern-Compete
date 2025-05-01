@@ -7,15 +7,15 @@ const Footer = () => {
   return (
     <footer>
       <div className="flex flex-col justify-center items-center gap-16 py-8 pt-16 border-t border-[#5C73AE]">
-        <div className="flex justify-evenly w-3/4">
-          <div className="footer-contact w-1/2 flex flex-col justify-center gap-6">
+        <div className="flex max-md:flex-col justify-evenly max-md:gap-8 md:w-3/4">
+          <div className="footer-contact md:w-1/2 flex flex-col justify-center gap-6">
             <div className="cursor-default">
-              <h1 className="text-7xl text-[#C5CDE3]">
+              <h1 className="lg:text-7xl text-5xl max-md:text-center text-[#C5CDE3]">
                 ad<span className="font-semibold">Task</span>.ai
               </h1>
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex md:flex-col max-sm:flex-col max-sm:items-center gap-4">
               <div className="flex items-end gap-2">
                 <div className="contact-icon">
                   <MdOutlineEmail className="text-[#5C73AE] w-6 h-6" />
@@ -34,7 +34,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="quick-links w-1/2 flex justify-evenly">
+          <div className="quick-links md:w-1/2 flex justify-evenly">
             <div className="flex flex-col gap-4 text-center">
                 <h3 className="font-semibold text-xl">Utilities</h3>
                 <div className="flex flex-col gap-4">

@@ -13,9 +13,9 @@ const ServiceCard: React.FC<{ items: ServiceItem[] }> = ({ items }) => {
     <div className="flex justify-center items-center xl:w-[1153px] xl:h-[660px]">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {items.map((item, index) => (<div key={index}>
-          <div className="w-[350px] h-[300px] flex flex-col items-center gap-4 justify-center relative">
+          <div className="md:w-[350px] md:h-[300px] w-[280px] h-[240px] flex flex-col items-center gap-4 justify-center relative">
             <div className="absolute inset-x-0 top-[50px] z-0 flex justify-center">
-              <div className="absolute w-[250px] h-[200px] bg-[#263048] blur-[40px] rounded-full"></div>
+              <div className="absolute sm:w-[250px] sm:h-[200px] w-[187px] h-[150px] bg-[#263048] blur-[40px] rounded-full"></div>
             </div>
   
             {/* Border Lines */}
@@ -59,8 +59,8 @@ const ServiceCard: React.FC<{ items: ServiceItem[] }> = ({ items }) => {
             >
               <GlowyIcon Icon={item.icon} size="5em" /> {/* Dynamic icon */}
               <div className="flex flex-col gap-3 justify-center items-center">
-                <h3 className="text-xl">{item.name}</h3>
-                <p className="px-4 text-sm text-center font-extralight">
+                <h3 className="sm:text-xl">{item.name}</h3>
+                <p className="px-4 sm:text-sm text-xs text-center font-extralight">
                   {item.description}
                 </p>
               </div>

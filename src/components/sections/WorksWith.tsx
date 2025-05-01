@@ -38,7 +38,7 @@ const WorksWith = () => {
       <div className="flex flex-col gap-8 justify-center items-center">
         <h2 className="text-[#E2E8F8]">AdTask AI works with :</h2>
         <div className="flex justify-center items-center">
-          <ul className="flex flex-wrap justify-center items-center md:gap-8 gap-4 max-sm:w-[358px]">
+          <ul className="flex flex-wrap justify-center items-center md:gap-8 gap-4 max-sm:w-[280px]">
             {worked.map((work, index) => {
               return <li className="relative cursor-pointer group transition-all duration-300" key={index}>
               <div className="relative top-4 group-hover:top-0 duration-300 flex justify-center items-center xl:w-28 xl:h-28 w-20 h-20 bg-gradient-to-l p-[1px] from-[#7687B5] to-[#333B4F] rounded-xl">
